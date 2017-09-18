@@ -1,0 +1,36 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<dom-module id="px-todo">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `px-todo`
+     * First pokymer element
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PxTodo extends Polymer.Element {
+      static get is() { return 'px-todo'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'px-todo'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PxTodo.is, PxTodo);
+  </script>
+</dom-module>
